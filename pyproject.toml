@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "oahm"
+version = "1.0.0"
+description = "Моделирование динамики океана, взаимодействия океана и атмосферы и речного стока: численные модели на Python"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Alex" }]
+dependencies = [
+    "numpy>=1.26",
+    "pandas>=2.1",
+    "scipy>=1.11",
+    "matplotlib>=3.8",
+    "openpyxl>=3.1",
+    "scikit-learn>=1.7.2",
+]
+
+[project.optional-dependencies]
+dev = [
+    "ipykernel>=6.29",
+    "nbconvert>=7.16",
+    "nbformat>=5.9",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
